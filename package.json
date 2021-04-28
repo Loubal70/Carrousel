@@ -1,0 +1,28 @@
+{
+  "name": "fs-carrousel",
+  "version": "1.0.0",
+  "description": "Composent Header Carrousel full page with lateral menu responsive",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass ./src/scss/style.scss ./src/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loubal70/Carrousel.git"
+  },
+  "keywords": [
+    "FS",
+    "Carrousel"
+  ],
+  "author": "Loubal70",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Loubal70/Carrousel/issues"
+  },
+  "homepage": "https://github.com/Loubal70/Carrousel#readme",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "sass": "^1.32.11",
+    "slick-carousel": "^1.8.1"
+  }
+}
