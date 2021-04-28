@@ -5,7 +5,7 @@ Composent Header Carrousel full page with lateral menu responsive
 ## Informations
 
 - Requires at least : ![SLICK](https://img.shields.io/badge/SLICK-Required-orange)
-- Tested up to : ![NPM](https://img.shields.io/badge/NPM-7.10.0-green.svg)
+- Tested up to : ![NPM](https://img.shields.io/badge/NPM-7.11.1-green.svg)
 
 ## Pour commencer
 
@@ -22,6 +22,14 @@ _Etape 1_: Exécutez la commande ``npm i`` afin d'installer les dépendances req
 **Dernière version stable :** 1.0.0 <br>
 **Dernière version :** 1.0.0<br>
 Liste des versions : [Cliquer pour afficher](https://github.com/Loubal70/GrandLine_WhiteList/tags)
+
+## Changelog
+
+### [Unreleased]
+
+### [1.0.0] - (28/04/2021)
+
+* Dev - Importation Slick Carrousel.
 
 ## Auteurs
 
