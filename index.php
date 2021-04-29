@@ -58,7 +58,7 @@
      </div>
 
      <!-- Mention Légales -->
-     <a class="mention_legale" href="'.$mention['Url'].'">Mentions légale</a>
+     <a class="mention_legale" href=''>Mentions légale</a>
 
 
      <!-- Carrousel -->
@@ -80,14 +80,28 @@
   <script type="text/javascript">
 
    $(document).ready(() => {
+     let count = 0;
        $('#carrousel').slick({
          autoplay: true,
          speed: 2500,
        });
        $('nav ul.languages li').on('click',function(){
-         alert($(this).attr('data-value'));
+         // alert($(this).attr('data-value'));
          $('#menu > ul > li.' + $(this).attr('data-value') ).toggleClass('is-active')
-         $('#menu > ul.submenu').toggleClass('is-active')
+         $(this).toggleClass('is-active')
+
+         if (!$('#menu > ul > li.' + $(this).attr('data-value') ).hasClass('is-active')) {
+           count--;
+           if (count <= 0) {
+             $('#menu > ul.submenu').removeClass('is-active');
+             console.log('suppression menu');
+           }
+         }
+         else {
+           count++;
+           $('#menu > ul.submenu').addClass('is-active');
+         }
+         console.log(count);
 
        });
    });

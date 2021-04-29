@@ -1,14 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;500;900&display=swap");
 nav {
   position: absolute;
-  background: rgba(255, 255, 255, 0.95);
   z-index: 10;
-  width: 200px;
+  width: 115px;
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
-  border-radius: 10px;
-  padding: 10px;
   font-family: "Open-Sans", sans-serif;
 }
 nav ul {
@@ -17,21 +14,17 @@ nav ul {
 }
 nav ul.languages li {
   display: block;
-  background: rgba(210, 210, 210, 0.74);
-  padding: 10px;
-  border-radius: 5px;
   margin: 10px;
-  transition: 0.3s cubic-bezier(0.06, 0.6, 0.96, 0.76);
-}
-nav ul.languages li:hover {
-  background: #b7b7b7;
+  padding: 10px;
   color: white;
-  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.06, 0.6, 0.96, 0.76);
 }
 nav ul.social-networks {
   display: flex;
   justify-content: left;
   margin: 10px;
+  color: white;
 }
 nav ul.social-networks li {
   font-size: 1.15rem;
@@ -45,11 +38,7 @@ nav ul.social-networks li:nth-child(1) i:hover {
 #menu > ul {
   position: absolute;
   z-index: 10;
-  left: 250px;
-  border-radius: 0.75rem;
-  background: rgba(216, 216, 216, 0.72);
-  padding: 40px;
-  backdrop-filter: blur(10px);
+  left: 75px;
   top: 50%;
   max-width: 300px;
   transform: translateY(-50%);
@@ -70,8 +59,7 @@ nav ul.social-networks li:nth-child(1) i:hover {
   list-style: none;
   font-family: "Roboto";
   font-weight: 300;
-  display: flex;
-  align-items: center;
+  color: white;
 }
 #menu > ul li:last-child {
   margin: 0 0 10px 0;
@@ -79,6 +67,7 @@ nav ul.social-networks li:nth-child(1) i:hover {
 #menu > ul li ul li {
   opacity: 0;
   display: none;
+  transition: opacity 2s;
 }
 #menu > ul li.is-active {
   border-left: 5px solid white;
@@ -86,7 +75,8 @@ nav ul.social-networks li:nth-child(1) i:hover {
 }
 #menu > ul li.is-active ul li {
   opacity: 1;
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 #carrousel {
@@ -115,11 +105,8 @@ nav ul.social-networks li:nth-child(1) i:hover {
   color: white;
   font-family: "Roboto";
   font-size: 1.3rem;
-  backdrop-filter: brightness(0.8);
   text-decoration: none;
-  color: white;
   padding: 10px;
-  border-radius: 5px;
   z-index: 10;
 }
 

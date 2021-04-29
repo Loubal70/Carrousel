@@ -31,6 +31,8 @@ Liste des versions : [Cliquer pour afficher](https://github.com/Loubal70/GrandLi
 
 * Fix - Suppression Logo Twitter et Pinterest
 * Dev - Affichage du menu en fonction de la catégorie
+* Fix - Supression CSS superflu (demandé par le client)
+* Dev - Automatisation du menu latéral
 
 ### [1.0.1] - (29/04/2021)
 
