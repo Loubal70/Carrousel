@@ -20,25 +20,22 @@
 
     <!-- Menu -->
 
-     <nav>
-       <span>Menu</span>
-       <ul class="languages">
-         <li onclick="this.classList.toggle('is-active')">EN</li>
-         <li onclick="this.classList.toggle('is-active')">FR</li>
-       </ul>
-
-       <ul class="social-networks">
-         <li><i class="fab fa-facebook-square"></i></li>
-         <li><i class="fab fa-twitter-square"></i></li>
-         <li><i class="fab fa-pinterest-square"></i></li>
-       </ul>
-
-     </nav>
-
      <div id="menu">
-       <ul>
-         <li>
-           <h1>École</h1>
+       <nav>
+
+         <ul class="languages">
+           <li data-value="École">École</li>
+           <li data-value="Études">Études</li>
+         </ul>
+
+         <ul class="social-networks">
+           <li><i class="fab fa-facebook-square"></i></li>
+         </ul>
+
+       </nav>
+
+       <ul class="submenu">
+         <li class="École">
            <ul>
              <li>Présentation</li>
              <li>L'école en un clic</li>
@@ -48,8 +45,7 @@
              <li>Équipe administrative</li>
            </ul>
          </li>
-         <li>
-           <h1>Études</h1>
+         <li class="Études">
            <ul>
              <li>Admission</li>
              <li>Inscription/Réinscription</li>
@@ -61,6 +57,11 @@
        </ul>
      </div>
 
+     <!-- Mention Légales -->
+     <a class="mention_legale" href="'.$mention['Url'].'">Mentions légale</a>
+
+
+     <!-- Carrousel -->
 
     <?php
       // Initialisation data
@@ -79,13 +80,16 @@
   <script type="text/javascript">
 
    $(document).ready(() => {
-     $('#carrousel').slick({
-       autoplay: false,
-       speed: 2500,
-     });
-     $('.languages li').on('click', () => {
-       $('#menu ul').toggleClass('is-active');
-     });
+       $('#carrousel').slick({
+         autoplay: true,
+         speed: 2500,
+       });
+       $('nav ul.languages li').on('click',function(){
+         alert($(this).attr('data-value'));
+         $('#menu > ul > li.' + $(this).attr('data-value') ).toggleClass('is-active')
+         $('#menu > ul.submenu').toggleClass('is-active')
+
+       });
    });
 
   </script>

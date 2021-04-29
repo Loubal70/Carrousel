@@ -11,11 +11,6 @@ $datas = [
   ]
 ];
 
-$mention = [
-  "Url"     => "https://github.com/Loubal70",
-  "Message" => "Mention légal de ce site",
-];
-
 // Initilisation display variable
   $html = "";
 
@@ -25,8 +20,6 @@ $mention = [
       $html .= '<div>';
         // Image
           $html .= '<img src="'. $data['ImageUrl'] .'" alt="'. $data['alt'] .'">';
-        // Mentions
-          $html .= '<a href="'.$mention['Url'].'">'. $mention['Message'] .'</a>';
 
       $html .= '</div>';
     }

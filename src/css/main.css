@@ -11,13 +11,6 @@ nav {
   padding: 10px;
   font-family: "Open-Sans", sans-serif;
 }
-nav span {
-  display: block;
-  margin: 10px auto;
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: 400;
-}
 nav ul {
   list-style: none;
   padding-left: 0;
@@ -37,34 +30,29 @@ nav ul.languages li:hover {
 }
 nav ul.social-networks {
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
   margin: 10px;
 }
 nav ul.social-networks li {
   font-size: 1.15rem;
   transition: color 0.25s ease;
+  padding: 0 10px;
 }
 nav ul.social-networks li:nth-child(1) i:hover {
   color: #3b5999;
-}
-nav ul.social-networks li:nth-child(2) i:hover {
-  color: #2bc4ff;
-}
-nav ul.social-networks li:nth-child(3) i:hover {
-  color: #bd081c;
 }
 
 #menu > ul {
   position: absolute;
   z-index: 10;
-  left: 13%;
+  left: 250px;
   border-radius: 0.75rem;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(216, 216, 216, 0.72);
   padding: 40px;
   backdrop-filter: blur(10px);
-  top: 0;
+  top: 50%;
   max-width: 300px;
-  bottom: 0;
+  transform: translateY(-50%);
   font-size: 0.9rem;
   line-height: 1.5rem;
   transition-timing-function: ease-out;
@@ -72,7 +60,7 @@ nav ul.social-networks li:nth-child(3) i:hover {
   -webkit-clip-path: circle(0px at left center);
   clip-path: circle(0px at left center);
 }
-#menu > ul.is-active {
+#menu > ul.submenu.is-active {
   transition-timing-function: cubic-bezier(0, 0, 0.84, 0.56);
   transition-duration: 1s;
   -webkit-clip-path: circle(100%);
@@ -88,15 +76,17 @@ nav ul.social-networks li:nth-child(3) i:hover {
 #menu > ul li:last-child {
   margin: 0 0 10px 0;
 }
-#menu > ul li ul {
+#menu > ul li ul li {
+  opacity: 0;
+  display: none;
+}
+#menu > ul li.is-active {
   border-left: 5px solid white;
   margin: 15px;
 }
-#menu > ul li h1 {
-  font-size: 1.563rem;
-  color: #ffffff;
-  font-weight: normal;
-  min-width: 100px;
+#menu > ul li.is-active ul li {
+  opacity: 1;
+  display: block;
 }
 
 #carrousel {
@@ -112,7 +102,13 @@ nav ul.social-networks li:nth-child(3) i:hover {
   object-fit: fill;
   transition: filter 0.3s cubic-bezier(0.78, -0.15, 1, 1);
 }
-#carrousel a {
+
+.slick-initialized .slick-slide {
+  position: relative;
+  background-color: black;
+}
+
+.mention_legale {
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -124,11 +120,7 @@ nav ul.social-networks li:nth-child(3) i:hover {
   color: white;
   padding: 10px;
   border-radius: 5px;
-}
-
-.slick-initialized .slick-slide {
-  position: relative;
-  background-color: black;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=main.css.map */

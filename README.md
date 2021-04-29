@@ -27,6 +27,11 @@ Liste des versions : [Cliquer pour afficher](https://github.com/Loubal70/GrandLi
 
 ### [Unreleased]
 
+### [1.0.2] - (29/04/2021)
+
+* Fix - Suppression Logo Twitter et Pinterest
+* Dev - Affichage du menu en fonction de la catégorie
+
 ### [1.0.1] - (29/04/2021)
 
 * Fix - Automatisation du carrousel + set speed to 2,5s
