@@ -1,4 +1,4 @@
-# FS - Carrousel [![plugin version](https://img.shields.io/badge/version-v1.0.1-color.svg)](https://github.com/Loubal70/Carrousel/releases/latest)
+# FS - Carrousel [![plugin version](https://img.shields.io/badge/version-v1.0.2-color.svg)](https://github.com/Loubal70/Carrousel/releases/latest)
 
 Composent Header Carrousel full page with lateral menu responsive
 
@@ -19,8 +19,8 @@ _Etape 1_: Exécutez la commande ``npm i`` afin d'installer les dépendances req
 
 ## Versions
 
-**Dernière version stable :** 1.0.1 <br>
-**Dernière version :** 1.0.1<br>
+**Dernière version stable :** 1.0.2 <br>
+**Dernière version :** 1.0.2<br>
 Liste des versions : [Cliquer pour afficher](https://github.com/Loubal70/GrandLine_WhiteList/tags)
 
 ## Changelog
