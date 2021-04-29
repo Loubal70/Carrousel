@@ -1,4 +1,4 @@
-# FS - Carrousel [![plugin version](https://img.shields.io/badge/version-v1.0.0-color.svg)](https://github.com/Loubal70/Carrousel/releases/latest)
+# FS - Carrousel [![plugin version](https://img.shields.io/badge/version-v1.0.1-color.svg)](https://github.com/Loubal70/Carrousel/releases/latest)
 
 Composent Header Carrousel full page with lateral menu responsive
 
@@ -19,13 +19,19 @@ _Etape 1_: Exécutez la commande ``npm i`` afin d'installer les dépendances req
 
 ## Versions
 
-**Dernière version stable :** 1.0.0 <br>
-**Dernière version :** 1.0.0<br>
+**Dernière version stable :** 1.0.1 <br>
+**Dernière version :** 1.0.1<br>
 Liste des versions : [Cliquer pour afficher](https://github.com/Loubal70/GrandLine_WhiteList/tags)
 
 ## Changelog
 
 ### [Unreleased]
+
+### [1.0.1] - (29/04/2021)
+
+* Fix - Automatisation du carrousel + set speed to 2,5s
+* Fix - Suppression de la librairie **hamburgers.min.css**
+* Fix - Suppression du lien dynamique entre slide
 
 ### [1.0.0] - (28/04/2021)
 

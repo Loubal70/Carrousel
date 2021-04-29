@@ -7,8 +7,6 @@
     <!-- CSS Slick -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <!-- Make Hamburger -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.8.1/hamburgers.min.css">
 
     <!-- Import Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
@@ -20,21 +18,13 @@
   </head>
   <body>
 
-    <!-- Hamburger Menu -->
-
-    <button id="simpleHamburger" class="hamburger hamburger--spring" onclick="this.classList.toggle('is-active')" type="button">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
-
     <!-- Menu -->
 
      <nav>
        <span>Menu</span>
        <ul class="languages">
-         <li>EN</li>
-         <li>FR</li>
+         <li onclick="this.classList.toggle('is-active')">EN</li>
+         <li onclick="this.classList.toggle('is-active')">FR</li>
        </ul>
 
        <ul class="social-networks">
@@ -91,7 +81,10 @@
    $(document).ready(() => {
      $('#carrousel').slick({
        autoplay: false,
-       speed: 800,
+       speed: 2500,
+     });
+     $('.languages li').on('click', () => {
+       $('#menu ul').toggleClass('is-active');
      });
    });
 

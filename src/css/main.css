@@ -1,30 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;500;900&display=swap");
-.hamburger {
-  position: absolute;
-  z-index: 10;
-  outline: none;
-}
-.hamburger .hamburger-inner, .hamburger .hamburger-inner:after, .hamburger .hamburger-inner:before {
-  background: #eee;
-}
-.hamburger.hamburger--spring.is-active ~ #carrousel img {
-  filter: brightness(0.7) blur(8px);
-}
-.hamburger.hamburger--spring.is-active ~ #menu > ul {
-  transition-timing-function: cubic-bezier(0, 0, 0.84, 0.56);
-  transition-duration: 1s;
-  -webkit-clip-path: circle(100%);
-  clip-path: circle(100%);
-}
-
 nav {
   position: absolute;
   background: rgba(255, 255, 255, 0.95);
   z-index: 10;
   width: 200px;
   top: 50%;
+  left: 10px;
   transform: translateY(-50%);
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px;
   padding: 10px;
   font-family: "Open-Sans", sans-serif;
 }
@@ -74,7 +57,7 @@ nav ul.social-networks li:nth-child(3) i:hover {
 #menu > ul {
   position: absolute;
   z-index: 10;
-  left: 12%;
+  left: 13%;
   border-radius: 0.75rem;
   background: rgba(255, 255, 255, 0.72);
   padding: 40px;
@@ -86,8 +69,14 @@ nav ul.social-networks li:nth-child(3) i:hover {
   line-height: 1.5rem;
   transition-timing-function: ease-out;
   transition-duration: 0.75s;
-  -webkit-clip-path: circle(0px at 0 0);
-  clip-path: circle(0px at 0 0);
+  -webkit-clip-path: circle(0px at left center);
+  clip-path: circle(0px at left center);
+}
+#menu > ul.is-active {
+  transition-timing-function: cubic-bezier(0, 0, 0.84, 0.56);
+  transition-duration: 1s;
+  -webkit-clip-path: circle(100%);
+  clip-path: circle(100%);
 }
 #menu > ul li {
   list-style: none;
@@ -117,21 +106,23 @@ nav ul.social-networks li:nth-child(3) i:hover {
   overflow: hidden;
 }
 #carrousel img {
-  filter: brightness(0.7);
+  filter: contrast(0.7);
   height: 100vh;
   width: 100%;
   object-fit: fill;
   transition: filter 0.3s cubic-bezier(0.78, -0.15, 1, 1);
 }
-#carrousel span {
+#carrousel a {
   position: absolute;
   bottom: 30px;
   right: 30px;
   color: white;
   font-family: "Roboto";
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   backdrop-filter: brightness(0.8);
-  padding: 5px;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
   border-radius: 5px;
 }
 
