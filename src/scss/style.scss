@@ -9,6 +9,16 @@
   & .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
     background: #eee;
   }
+
+  &.hamburger--spring.is-active ~ #carrousel img{
+    filter: brightness(0.7) blur(8px);
+  }
+  &.hamburger--spring.is-active ~ #menu > ul{
+    transition-timing-function: cubic-bezier(0, 0, 0.84, 0.56);
+    transition-duration: 1s;
+    -webkit-clip-path: circle(100%);
+    clip-path: circle(100%);
+  }
 }
 
 // Left Menu
@@ -16,7 +26,7 @@ nav{
   position: absolute;
   background: rgb(255 255 255 / 95%);
   z-index: 10;
-  width: 300px;
+  width: 200px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 0 10px 10px 0;
@@ -72,6 +82,52 @@ nav{
   }
 }
 
+// Right Menu
+
+#menu > ul{
+  position: absolute;
+  z-index: 10;
+  left: 12%;
+  border-radius: .75rem;
+  background: rgb(255 255 255 / 72%);
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  top: 0;
+  max-width: 300px;
+  bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  transition-timing-function: ease-out;
+  transition-duration: 0.75s;
+  -webkit-clip-path: circle(0px at 0 0);
+  clip-path: circle(0px at 0 0);
+
+  & li{
+    list-style: none;
+    font-family: 'Roboto';
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+
+    &:last-child{
+      margin: 0 0 10px 0;
+    }
+
+    & ul{
+      border-left: 5px solid white;
+      margin: 15px;
+    }
+
+    & h1{
+      font-size: 1.563rem;
+      color: #ffffff;
+      font-weight: normal;
+      min-width: 100px;
+    }
+
+  }
+}
+
 #carrousel{
   position: relative;
   width: 100%;
@@ -83,6 +139,7 @@ nav{
     height: 100vh;
     width: 100%;
     object-fit: fill;
+    transition: filter .3s cubic-bezier(0.78, -0.15, 1, 1);
   }
 
   & span {
@@ -99,4 +156,5 @@ nav{
 }
 .slick-initialized .slick-slide{
   position: relative;
+  background-color: black;
 }

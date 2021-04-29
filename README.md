@@ -29,6 +29,7 @@ Liste des versions : [Cliquer pour afficher](https://github.com/Loubal70/GrandLi
 
 ### [1.0.0] - (28/04/2021)
 
+* Création Menu & Sous menu en fonction d'un bouton hamburger
 * Dev - Importation Slick Carrousel.
 
 ## Auteurs

@@ -7,12 +7,21 @@
 .hamburger .hamburger-inner, .hamburger .hamburger-inner:after, .hamburger .hamburger-inner:before {
   background: #eee;
 }
+.hamburger.hamburger--spring.is-active ~ #carrousel img {
+  filter: brightness(0.7) blur(8px);
+}
+.hamburger.hamburger--spring.is-active ~ #menu > ul {
+  transition-timing-function: cubic-bezier(0, 0, 0.84, 0.56);
+  transition-duration: 1s;
+  -webkit-clip-path: circle(100%);
+  clip-path: circle(100%);
+}
 
 nav {
   position: absolute;
   background: rgba(255, 255, 255, 0.95);
   z-index: 10;
-  width: 300px;
+  width: 200px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 0 10px 10px 0;
@@ -62,6 +71,45 @@ nav ul.social-networks li:nth-child(3) i:hover {
   color: #bd081c;
 }
 
+#menu > ul {
+  position: absolute;
+  z-index: 10;
+  left: 12%;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  top: 0;
+  max-width: 300px;
+  bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  transition-timing-function: ease-out;
+  transition-duration: 0.75s;
+  -webkit-clip-path: circle(0px at 0 0);
+  clip-path: circle(0px at 0 0);
+}
+#menu > ul li {
+  list-style: none;
+  font-family: "Roboto";
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+#menu > ul li:last-child {
+  margin: 0 0 10px 0;
+}
+#menu > ul li ul {
+  border-left: 5px solid white;
+  margin: 15px;
+}
+#menu > ul li h1 {
+  font-size: 1.563rem;
+  color: #ffffff;
+  font-weight: normal;
+  min-width: 100px;
+}
+
 #carrousel {
   position: relative;
   width: 100%;
@@ -73,6 +121,7 @@ nav ul.social-networks li:nth-child(3) i:hover {
   height: 100vh;
   width: 100%;
   object-fit: fill;
+  transition: filter 0.3s cubic-bezier(0.78, -0.15, 1, 1);
 }
 #carrousel span {
   position: absolute;
@@ -88,6 +137,7 @@ nav ul.social-networks li:nth-child(3) i:hover {
 
 .slick-initialized .slick-slide {
   position: relative;
+  background-color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -45,6 +45,32 @@
 
      </nav>
 
+     <div id="menu">
+       <ul>
+         <li>
+           <h1>École</h1>
+           <ul>
+             <li>Présentation</li>
+             <li>L'école en un clic</li>
+             <li>Visite virtuelle</li>
+             <li>Organisation</li>
+             <li>Équipe enseignante</li>
+             <li>Équipe administrative</li>
+           </ul>
+         </li>
+         <li>
+           <h1>Études</h1>
+           <ul>
+             <li>Admission</li>
+             <li>Inscription/Réinscription</li>
+             <li>Formations</li>
+             <li>International</li>
+             <li>Chaires</li>
+           </ul>
+         </li>
+       </ul>
+     </div>
+
 
     <?php
       // Initialisation data
