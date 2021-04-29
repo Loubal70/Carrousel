@@ -2,4 +2,3 @@ node_modules/
 .gitignore
 .gitattributes
 src/scss/
-src/scss/*
