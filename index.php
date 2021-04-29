@@ -35,7 +35,7 @@
        </nav>
 
        <ul class="submenu">
-         <li class="École">
+         <li data-value="École">
            <ul>
              <li>Présentation</li>
              <li>L'école en un clic</li>
@@ -45,7 +45,7 @@
              <li>Équipe administrative</li>
            </ul>
          </li>
-         <li class="Études">
+         <li data-value="Études">
            <ul>
              <li>Admission</li>
              <li>Inscription/Réinscription</li>
@@ -85,25 +85,26 @@
          autoplay: true,
          speed: 2500,
        });
-       $('nav ul.languages li').on('click',function(){
-         // alert($(this).attr('data-value'));
-         $('#menu > ul > li.' + $(this).attr('data-value') ).toggleClass('is-active')
-         $(this).toggleClass('is-active')
 
-         if (!$('#menu > ul > li.' + $(this).attr('data-value') ).hasClass('is-active')) {
-           count--;
-           if (count <= 0) {
-             $('#menu > ul.submenu').removeClass('is-active');
-             console.log('suppression menu');
-           }
-         }
-         else {
-           count++;
-           $('#menu > ul.submenu').addClass('is-active');
-         }
-         console.log(count);
+       $(window).click(function(){
+         // A chaque click qui n'est pas sur le menu
+         $('#menu > .submenu').removeClass('is-active');
+        });
+        $('#menu > nav > ul > li').click(function(event){
+         event.stopPropagation();
+         value = $(this).attr('data-value');
+            if ( !$(this).hasClass('active') ){
+              $('#menu > nav > ul > li').removeClass('is-active');
+              $('#menu > .submenu > li').removeClass('is-active');
+            }
+            $(this).toggleClass('is-active');
 
-       });
+            $('#menu > .submenu li[data-value="' + value + '"]').toggleClass('is-active');
+
+            $('#menu > .submenu').addClass('is-active');
+            console.log($('#menu > .submenu li.is-active').length);
+        });
+
    });
 
   </script>
