@@ -84,25 +84,29 @@
        $('#carrousel').slick({
          autoplay: true,
          speed: 2500,
+         prevArrow: false,
+         nextArrow: false,
        });
 
-       $(window).click(function(){
-         // A chaque click qui n'est pas sur le menu
-         $('#menu > .submenu').removeClass('is-active');
-        });
         $('#menu > nav > ul > li').click(function(event){
          event.stopPropagation();
          value = $(this).attr('data-value');
-            if ( !$(this).hasClass('active') ){
-              $('#menu > nav > ul > li').removeClass('is-active');
+            if ( !$(this).hasClass('is-active') ){
               $('#menu > .submenu > li').removeClass('is-active');
+              $('#menu > nav > ul > li').removeClass('is-active');
+
             }
             $(this).toggleClass('is-active');
 
             $('#menu > .submenu li[data-value="' + value + '"]').toggleClass('is-active');
 
-            $('#menu > .submenu').addClass('is-active');
             console.log($('#menu > .submenu li.is-active').length);
+            if ($('#menu > .submenu li[data-value="' + value + '"]').hasClass('is-active')) {
+              $('#menu > .submenu').addClass('is-active');
+            }
+            else {
+              $('#menu > .submenu').removeClass('is-active');
+            }
         });
 
    });

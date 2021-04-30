@@ -20,6 +20,21 @@ nav ul.languages li {
   cursor: pointer;
   transition: 0.3s cubic-bezier(0.06, 0.6, 0.96, 0.76);
 }
+nav ul.languages li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  top: 45%;
+  transform: translateY(-50%);
+  right: 95%;
+  transition: all 0.3s ease-in-out;
+}
+nav ul.languages li:hover:before {
+  width: 40%;
+}
 nav ul.social-networks {
   display: flex;
   justify-content: left;
@@ -42,7 +57,7 @@ nav ul.social-networks li:nth-child(1) i:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 30%);
   opacity: 0.7;
   z-index: 9;
 }
@@ -91,6 +106,16 @@ nav ul.social-networks li:nth-child(1) i:hover {
   align-items: center;
 }
 
+nav ul li, #menu > ul li.is-active ul li {
+  transition: transform 0.25s ease-in-out;
+  transform-origin: left;
+}
+nav ul li:hover, #menu > ul li.is-active ul li:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+  font-weight: 500;
+}
+
 #carrousel {
   position: relative;
   width: 100%;
@@ -101,7 +126,7 @@ nav ul.social-networks li:nth-child(1) i:hover {
   filter: contrast(0.7);
   height: 100vh;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
   transition: filter 0.3s cubic-bezier(0.78, -0.15, 1, 1);
 }
 
